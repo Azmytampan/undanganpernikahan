@@ -1,0 +1,827 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background: #faf7f0;
+
+    color: #574c3e;
+
+    line-height: 1.8;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   COVER
+========================= */
+
+.cover {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #fffdf8 0%,
+            #eee3ce 100%
+        );
+}
+
+
+/* Lingkaran dekorasi */
+
+.cover::before,
+.cover::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid #c9a96e;
+
+    border-radius: 50%;
+
+    opacity: 0.25;
+}
+
+.cover::before {
+    top: -150px;
+    left: -150px;
+}
+
+.cover::after {
+    right: -150px;
+    bottom: -150px;
+}
+
+
+/* Label */
+
+.label {
+    text-transform: uppercase;
+
+    letter-spacing: 5px;
+
+    font-size: 11px;
+
+    color: #aa864e;
+}
+
+
+/* Nama */
+
+.cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(65px, 13vw, 120px);
+
+    font-weight: 500;
+
+    color: #76603e;
+
+    line-height: 1;
+}
+
+.cover h1 span {
+    color: #bd9857;
+}
+
+
+/* Garis */
+
+.line {
+    width: 90px;
+
+    height: 1px;
+
+    background: #bd9857;
+
+    margin: 30px auto;
+}
+
+
+/* Tanggal */
+
+.cover-date {
+    color: #927444;
+
+    letter-spacing: 4px;
+}
+
+
+/* Tamu */
+
+.guest {
+    margin-top: 45px;
+
+    color: #756b5d;
+
+    font-size: 14px;
+}
+
+
+/* Tombol */
+
+.open-button {
+    margin-top: 20px;
+
+    border: 1px solid #b99557;
+
+    background: #b99557;
+
+    color: white;
+
+    padding: 12px 30px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.open-button:hover {
+    background: transparent;
+
+    color: #9b793e;
+}
+
+
+/* Dekorasi */
+
+.cover-decoration {
+    color: #bd9857;
+
+    font-size: 35px;
+
+    position: absolute;
+}
+
+.cover-decoration.top {
+    top: 20px;
+}
+
+.cover-decoration.bottom {
+    bottom: 20px;
+}
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-button {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid white;
+
+    background: #a98650;
+
+    color: white;
+
+    z-index: 100;
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section:not(.cover) {
+    padding: 100px 20px;
+}
+
+section h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    text-align: center;
+
+    font-size: 52px;
+
+    font-weight: 500;
+
+    color: #76603e;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.circle-decoration {
+    width: 100px;
+    height: 100px;
+
+    margin: 35px auto;
+
+    border: 1px solid #c6a46a;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #b68e4d;
+
+    font-size: 35px;
+}
+
+.hero h2 {
+    font-size: 75px;
+
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #777064;
+}
+
+.ornament {
+    color: #bd9857;
+
+    font-size: 35px;
+
+    margin: 20px;
+}
+
+.hero h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+
+    color: #9c783f;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+    background: #e9dfcd;
+
+    text-align: center;
+}
+
+.quote-mark {
+    font-family: serif;
+
+    color: #bd9857;
+
+    font-size: 80px;
+
+    height: 70px;
+}
+
+.quote p {
+    max-width: 750px;
+
+    margin: auto;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 26px;
+}
+
+.quote span {
+    display: block;
+
+    margin-top: 25px;
+
+    color: #8e7858;
+}
+
+
+/* =========================
+   COUPLE
+========================= */
+
+.couple {
+    background: #fffdf9;
+
+    text-align: center;
+}
+
+.couple-wrapper {
+    max-width: 850px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 100px 1fr;
+
+    align-items: center;
+}
+
+.initial {
+    width: 130px;
+    height: 130px;
+
+    margin: auto auto 25px;
+
+    border-radius: 50%;
+
+    border: 1px solid #c5a367;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 65px;
+
+    color: #aa8247;
+
+    background: #faf6ed;
+}
+
+.name-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 34px;
+
+    color: #78603e;
+}
+
+.name-card p {
+    color: #777064;
+}
+
+.heart {
+    color: #b78b48;
+
+    font-size: 45px;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section {
+    background: #70604c;
+
+    text-align: center;
+}
+
+.countdown-section h2 {
+    color: white;
+}
+
+.countdown-section .label {
+    color: #e5c889;
+}
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.count-box {
+    min-width: 110px;
+
+    padding: 18px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.count-box strong {
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    color: white;
+
+    font-size: 45px;
+}
+
+.count-box span {
+    color: #e5dac9;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   EVENT
+========================= */
+
+.event {
+    text-align: center;
+}
+
+.event-wrapper {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.event-card {
+    padding: 45px 30px;
+
+    background: white;
+
+    border: 1px solid #e8decc;
+
+    box-shadow: 0 15px 50px rgba(100,80,40,0.06);
+}
+
+.event-symbol {
+    color: #bd9857;
+
+    font-size: 35px;
+}
+
+.event-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 35px;
+
+    color: #78603e;
+}
+
+.event-line {
+    width: 50px;
+
+    height: 1px;
+
+    background: #c7a66b;
+
+    margin: 15px auto;
+}
+
+.event-card strong {
+    color: #a27c43;
+}
+
+.event-card a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 9px 22px;
+
+    background: #ad874d;
+
+    color: white;
+
+    border-radius: 25px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    background: #f0e7d8;
+}
+
+.timeline {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.story-item {
+    display: grid;
+
+    grid-template-columns: 90px 1fr;
+
+    gap: 25px;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid #d8cbb7;
+}
+
+.year {
+    font-family: 'Cormorant Garamond', serif;
+
+    color: #a77d3e;
+
+    font-size: 30px;
+}
+
+.story-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 28px;
+
+    color: #76603e;
+}
+
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp {
+    text-align: center;
+
+    background: #fffdf9;
+}
+
+.description {
+    max-width: 600px;
+
+    margin: -25px auto 35px;
+
+    color: #777064;
+}
+
+#rsvpForm {
+    max-width: 550px;
+
+    margin: auto;
+}
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 14px;
+
+    border: 1px solid #ded3c0;
+
+    background: #faf7f0;
+
+    outline: none;
+}
+
+#rsvpForm textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+#rsvpForm button {
+    border: none;
+
+    padding: 13px 30px;
+
+    border-radius: 25px;
+
+    background: #b18a4d;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+
+    color: #9a743c;
+}
+
+
+/* =========================
+   WEDDING GIFT
+========================= */
+
+.gift {
+    background: #eee5d6;
+
+    text-align: center;
+}
+
+.bank {
+    max-width: 430px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border: 1px solid #e3d7c4;
+}
+
+.bank span {
+    color: #1d58a0;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+}
+
+.bank h3 {
+    font-size: 27px;
+
+    letter-spacing: 3px;
+
+    margin: 12px 0;
+
+    color: #544a3d;
+}
+
+.bank button {
+    margin-top: 20px;
+
+    border: none;
+
+    background: #ae874c;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing {
+    text-align: center;
+
+    background: #70604c;
+
+    color: white;
+}
+
+.closing h2 {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.closing h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    color: #e4c37e;
+
+    font-size: 45px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #4f4538;
+
+    color: #ddd;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    section:not(.cover) {
+        padding: 70px 20px;
+    }
+
+    section h2 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 58px;
+    }
+
+    .couple-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .heart {
+        font-size: 35px;
+    }
+
+    .event-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .count-box {
+        min-width: 75px;
+    }
+
+    .count-box strong {
+        font-size: 35px;
+    }
+
+    .story-item {
+        grid-template-columns: 65px 1fr;
+    }
+
+    .year {
+        font-size: 23px;
+    }
+
+}

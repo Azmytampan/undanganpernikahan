@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Undangan Pernikahan | Azmy & Sela</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         COVER / PEMBUKA
+    ========================== -->
+
+    <section class="cover" id="cover">
+
+        <div class="cover-decoration top">
+            ✦
+        </div>
+
+        <p class="label">
+            THE WEDDING OF
+        </p>
+
+        <h1>
+            Azmy <span>&</span> Sela
+        </h1>
+
+        <div class="line"></div>
+
+        <p class="cover-date">
+            21 • 11 • 2028
+        </p>
+
+        <p class="guest">
+            Kepada Yth.<br>
+            <strong>Bapak/Ibu/Saudara/i</strong>
+        </p>
+
+        <button class="open-button" onclick="openInvitation()">
+            Buka Undangan
+        </button>
+
+        <div class="cover-decoration bottom">
+            ✦
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ISI UNDANGAN
+    ========================== -->
+
+    <main id="main" class="hidden">
+
+        <!-- MUSIC -->
+
+        <audio id="music" loop>
+            <source src="paulyudin-wedding-wedding-music-574002.mp3" type="audio/mpeg">
+        </audio>
+
+        <button
+            class="music-button"
+            onclick="toggleMusic()">
+            ♪
+        </button>
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <p class="label">
+                THE WEDDING OF
+            </p>
+
+            <div class="circle-decoration">
+                ♥
+            </div>
+
+            <h2>
+                Azmy & Sela
+            </h2>
+
+            <p class="hero-description">
+                Dengan memohon rahmat dan ridho Allah SWT,
+                kami bermaksud mengundang Bapak/Ibu/Saudara/i
+                untuk hadir dalam acara pernikahan kami.
+            </p>
+
+            <div class="ornament">
+                ❦
+            </div>
+
+            <h3>
+                21 November 2028
+            </h3>
+
+        </section>
+
+
+        <!-- =========================
+             QUOTE
+        ========================== -->
+
+        <section class="quote">
+
+            <div class="quote-mark">
+                “
+            </div>
+
+            <p>
+                Dan di antara tanda-tanda kekuasaan-Nya ialah
+                Dia menciptakan untukmu pasangan hidup dari
+                jenismu sendiri, supaya kamu merasa tenteram
+                kepadanya, dan dijadikan-Nya di antaramu
+                rasa kasih dan sayang.
+            </p>
+
+            <span>
+                QS. Ar-Rum: 21
+            </span>
+
+        </section>
+
+
+        <!-- =========================
+             MEMPELAI
+        ========================== -->
+
+        <section class="couple">
+
+            <p class="label">
+                Mempelai
+            </p>
+
+            <h2>
+                Dengan Penuh Cinta
+            </h2>
+
+            <div class="couple-wrapper">
+
+                <div class="name-card">
+
+                    <div class="initial">
+                        A
+                    </div>
+
+                    <h3>
+                        Azmy R.Akbar
+                    </h3>
+
+                    <p>
+                        Putra pertama dari
+                    </p>
+
+                    <p>
+                        Bapak Ishak
+                        <br>
+                        & Ibu Erni Mawati
+            
+                    </p>
+
+                </div>
+
+
+                <div class="heart">
+                    ♥
+                </div>
+
+
+                <div class="name-card">
+
+                    <div class="initial">
+                        S
+                    </div>
+
+                    <h3>
+                        Sela Maharani
+                    </h3>
+
+                    <p>
+                        Putri kedua dari
+                    </p>
+
+                    <p>
+                        Bapak Sabri
+                        <br>
+                        & Ibu Ida Aini
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COUNTDOWN
+        ========================== -->
+
+        <section class="countdown-section">
+
+            <p class="label">
+                SAVE THE DATE
+            </p>
+
+            <h2>
+                Menuju Hari Bahagia
+            </h2>
+
+            <div class="countdown">
+
+                <div class="count-box">
+                    <strong id="days">00</strong>
+                    <span>Hari</span>
+                </div>
+
+                <div class="count-box">
+                    <strong id="hours">00</strong>
+                    <span>Jam</span>
+                </div>
+
+                <div class="count-box">
+                    <strong id="minutes">00</strong>
+                    <span>Menit</span>
+                </div>
+
+                <div class="count-box">
+                    <strong id="seconds">00</strong>
+                    <span>Detik</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ACARA
+        ========================== -->
+
+        <section class="event">
+
+            <p class="label">
+                WAKTU & TEMPAT
+            </p>
+
+            <h2>
+                Acara Pernikahan
+            </h2>
+
+            <div class="event-wrapper">
+
+                <!-- AKAD -->
+
+                <div class="event-card">
+
+                    <div class="event-symbol">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Akad Nikah
+                    </h3>
+
+                    <div class="event-line"></div>
+
+                    <strong>
+                        Selasa, 21 November 2028
+                    </strong>
+
+                    <p>
+                        08.00 WIB - selesai
+                    </p>
+
+                    <p>
+                        Rumah Mempelai Pria
+                        <br>
+                        Selebung
+                    </p>
+
+                    <a
+                        href="https://maps.app.goo.gl/KzozAc8QL7stBiNG6"
+                        target="_blank">
+                        Lihat Lokasi
+                    </a>
+
+                </div>
+
+
+                <!-- RESEPSI -->
+
+                <div class="event-card">
+
+                    <div class="event-symbol">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Resepsi
+                    </h3>
+
+                    <div class="event-line"></div>
+
+                    <strong>
+                        Selasa, 21 November 2028
+                    </strong>
+
+                    <p>
+                        11.00 - 14.00 WIB
+                    </p>
+
+                    <p>
+                        Rumah Mempelai Pria
+                        <br>
+                        Selebung
+                    </p>
+
+                    <a
+                        href="https://maps.app.goo.gl/eDasToNBsKqdJq5p6"
+                        target="_blank">
+                        Lihat Lokasi
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LOVE STORY
+        ========================== -->
+
+        <section class="story">
+
+            <p class="label">
+                OUR STORY
+            </p>
+
+            <h2>
+                Kisah Kami
+            </h2>
+
+            <div class="timeline">
+
+                <div class="story-item">
+
+                    <div class="year">
+                        2019
+                    </div>
+
+                    <div>
+                        <h3>
+                            Pertama Bertemu Di SMA
+                        </h3>
+
+                        <p>
+                            Awal dari kisah panjang kita
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="story-item">
+
+                    <div class="year">
+                        2019
+                    </div>
+
+                    <div>
+                        <h3>
+                            Memulai Hubungan
+                        </h3>
+
+                        <p>
+                            Kami mulai saling mengenal,
+                            memahami dan mendukung satu sama lain.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="story-item">
+
+                    <div class="year">
+                        2028
+                    </div>
+
+                    <div>
+                        <h3>
+                            Lamaran
+                        </h3>
+
+                        <p>
+                            Dengan restu kedua keluarga,
+                            kami memantapkan hati untuk bersama.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="story-item">
+
+                    <div class="year">
+                        2028
+                    </div>
+
+                    <div>
+                        <h3>
+                            Hari Pernikahan
+                        </h3>
+
+                        <p>
+                            InsyaAllah Hari Ini kami memulai perjalanan
+                            baru sebagai suami dan istri.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RSVP
+        ========================== -->
+
+        <section class="rsvp">
+
+            <p class="label">
+                RSVP
+            </p>
+
+            <h2>
+                Konfirmasi Kehadiran
+            </h2>
+
+            <p class="description">
+                Silakan konfirmasi kehadiran Anda
+                melalui formulir berikut.
+            </p>
+
+            <form id="rsvpForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Nama Anda"
+                    required>
+
+                <select
+                    id="attendance"
+                    required>
+
+                    <option value="">
+                        Pilih Konfirmasi
+                    </option>
+
+                    <option value="Hadir">
+                        Saya akan hadir
+                    </option>
+
+                    <option value="Tidak Hadir">
+                        Maaf, saya tidak dapat hadir
+                    </option>
+
+                </select>
+
+                <textarea
+                    id="message"
+                    placeholder="Tuliskan ucapan untuk kami">
+                </textarea>
+
+                <button type="submit">
+                    Kirim Konfirmasi
+                </button>
+
+            </form>
+
+            <div id="result"></div>
+
+        </section>
+
+
+        <!-- =========================
+             WEDDING GIFT
+        ========================== -->
+
+        <section class="gift">
+
+            <p class="label">
+                WEDDING GIFT
+            </p>
+
+            <h2>
+                Hadiah Pernikahan
+            </h2>
+
+            <p class="description">
+                Doa restu Anda merupakan hadiah terindah
+                bagi kami.
+            </p>
+
+            <div class="bank">
+
+                <span>
+                    BANK MANDIRI
+                </span>
+
+                <h3>
+                    1610011351025
+                </h3>
+
+                <p>
+                    a.n. M Azmy Rohmatul Akbar
+                </p>
+
+                <button onclick="copyAccount()">
+                    Salin Rekening
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PENUTUP
+        ========================== -->
+
+        <section class="closing">
+
+            <div class="ornament">
+                ❦
+            </div>
+
+            <h2>
+                Terima Kasih
+            </h2>
+
+            <p>
+                Atas doa, restu, dan kehadiran Anda
+                dalam hari bahagia kami.
+            </p>
+
+            <h3>
+                Azmy & Sela
+            </h3>
+
+            <div class="ornament">
+                ❦
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+            © 2028 Azmy & Sela
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
